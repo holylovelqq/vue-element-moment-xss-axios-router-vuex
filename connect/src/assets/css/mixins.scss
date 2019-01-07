@@ -1,0 +1,27 @@
+// (C) 2018 SEIKO SOLUTIONS INC.
+
+@mixin border-primary {
+  border-radius: 4px;
+  border: 1px solid $border-color-primary;
+}
+
+//
+// Media Query
+//
+@mixin media-query-sm {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin media-query-md {
+  @media screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin media-query-lg {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}

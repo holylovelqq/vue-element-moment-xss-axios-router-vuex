@@ -1,0 +1,30 @@
+// (C) 2018 SEIKO SOLUTIONS INC.
+
+//
+// 全体的
+//
+
+*{margin:0;padding:0;box-sizing: border-box;}
+html,body,#app,.wrapper{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  font-size: 14px;
+}
+a{text-decoration: none}
+p{word-wrap:break-word}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $font-color-primary;
+  background-color:$graybgc;
+}
+th {
+  font-weight: normal;
+}
+
+// element-ui componentの調整
+.el-input__inner{
+  border:none;
+}

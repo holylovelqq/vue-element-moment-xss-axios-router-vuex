@@ -1,0 +1,17 @@
+// (C) 2018 SEIKO SOLUTIONS INC.
+
+// custom element-ui theme color custom
+
+$--color-primary: #1C93E2;
+$--color-text-primary: #6E838E;
+$--color-text-regular: #6E838E;
+$--color-text-secondary: #B0B8BC;
+// Break-point
+$--sm: 769px;
+$--md: 1025px;
+$--lg: 1367px;
+// $--xl: 1920px;
+// icon path，必須
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
