@@ -3,18 +3,19 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
-import router from './router'
-import store from './store/index.js'
+import App from '@/App'
+import router from '@/router'
+import store from '@/store/index.js'
 import Moment from 'moment'
 import Axios from 'axios'
 import ElementUI from 'element-ui'
-import './assets/css/element-variables.scss'// elementui custom theme
+import '@/assets/css/element-variables.scss'// elementui custom theme
 import 'normalize.css'
 import 'babel-polyfill'
-import '../static/iconfont/material-icons.css'
+import '../public/iconfont/material-icons.css'
 import locale from 'element-ui/lib/locale/lang/ja'
-import AppButton from '@/components/common/AppButton'
+import AppButton from '@/basics/AppButton'
+import '@/assets/css/main.scss'
 
 Vue.config.productionTip = false
 
@@ -49,7 +50,7 @@ Vue.component('AppButton', AppButton)
 // })
 
 const getConfigJson = function () {
-  Axios.get('/static/settings.json').then(res => {
+  Axios.get('/settings.json').then(res => {
     // Vue.prototype.api_baseURL = res.data.api_baseURL
     Axios.defaults.baseURL = res.data.api_baseURL + '/api/'
     /* eslint-disable no-new */
@@ -60,7 +61,8 @@ const getConfigJson = function () {
       components: {
         App
       },
-      template: '<App/>'
+      // template: '<App/>'
+      render: h => h(App)
     })
   }).catch(err => console.log(err))
 }

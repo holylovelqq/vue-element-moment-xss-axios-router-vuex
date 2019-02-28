@@ -1,0 +1,220 @@
+// (C) 2018 SEIKO SOLUTIONS INC.
+//
+// リッチテキストエディタのコンテンツのスタイル
+//
+// /node-modules/tui-editor/dist/tui-editor-contents.cssからコピーして、
+// 必要な部分を編集した。
+//
+// @todo コードブロックのスタイルを調整する
+
+.tui-editor-contents,
+.rich-text {
+  color: $font-color-primary;
+  font-family: $font-family-primary;
+
+  // Common
+  *:not(table) {
+    line-height: 160%;
+    box-sizing: content-box;
+  }
+  > *:first-child {
+    margin-top: 8px;
+  }
+
+  // .CodeMirror {
+  //     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // }
+  //
+
+  // Inline Styles
+  i,
+  cite,
+  em,
+  var,
+  address,
+  dfn {
+      font-style: italic;
+  }
+  strong {
+      font-weight: bold;
+  }
+
+  // Link
+  a {
+    text-decoration: underline;
+    color: $font-color-link;
+  }
+  a:hover {
+      color: #007cff;
+  }
+
+  // Pragragh
+  p {
+    margin: 12px 0;
+  }
+
+  // Headings
+  h1 {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 28px;
+    margin: 32px 0 16px 0;
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 23px;
+    border-bottom: 2px solid $border-color-primary;
+    padding-bottom: 2px;
+    margin: 18px 0 12px 0;
+  }
+  h3 {
+    font-size: 1.1rem;
+    line-height: 18px;
+    margin: 18px 0 2px;
+  }
+  h4 {
+    margin: 18px 0 2px;
+  }
+  h5 {
+    font-weight: normal;
+    margin: 18px 0 2px;
+  }
+  h6 {
+    font-weight: normal;
+    margin: 18px 0 2px;
+  }
+
+  // Blockquote
+  blockquote {
+      margin: 12px 0;
+  }
+  blockquote {
+    border-left: 4px solid $border-color-primary;
+    color: $font-color-secondary;
+    padding: 0 12px;
+  }
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+   blockquote > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Code Block
+  pre,
+  code {
+    font-family: $font-family-code;
+    border: 0;
+    border-radius: 0;
+  }
+  pre {
+    margin: 2px 0 8px;
+    padding: 18px;
+    background-color: #f5f7f8;
+  }
+  code {
+    color: #c1788b;
+    padding: 4px 4px 2px 0;
+    letter-spacing: -0.3px;
+  }
+  pre code {
+    padding: 0;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+  }
+  pre.addon {
+    border: 1px solid #e8ebed;
+    background-color: #fff;
+  }
+
+  // Image
+  img {
+    margin: 4px 0 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    max-width: 100%;
+  }
+
+  // Table
+  table {
+    margin: 12px 0;
+    width: auto;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    border-top: 1px solid $border-color-primary;
+  }
+  table th,
+  table td {
+    padding: 4px 12px 4px 12px;
+  }
+  table td {
+    border: 1px solid $border-color-primary;
+  }
+  table th {
+    border: 1px solid $border-color-primary;
+    border-top: 0;
+    background-color: $border-color-secondary;
+    font-weight: normal;
+  }
+
+  // List
+  ul,
+  ol {
+    display: block;
+    list-style-type: disc;
+    padding-left: 17px;
+    margin: 12px 0 12px 12px;
+  }
+  ol {
+    list-style-type: decimal;
+    margin: 12px 0 12px 6px;
+  }
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  ul li {
+    position: relative;
+  }
+  ul p, ol p {
+    margin: 0;
+  }
+  pre ul li:before {
+    content: "";
+  }
+
+  // Code Block
+  pre,
+  code {
+    font-family: $font-family-code;
+    border: 0;
+    border-radius: 0;
+  }
+  pre {
+    color: #fff;
+    margin: 12px 0;
+    padding: 12px 16px;
+    background-color: #2F3F47;
+    border-radius: 4px;
+  }
+  code {
+    color: #c1788b;
+    padding: 4px 4px 2px 0;
+    letter-spacing: -0.3px;
+  }
+  pre code {
+    padding: 0;
+    color: #fff;
+    white-space: pre-wrap;
+    background-color: transparent;
+  }
+  pre.addon {
+    border: 1px solid #e8ebed;
+    background-color: #fff;
+  }
+}
